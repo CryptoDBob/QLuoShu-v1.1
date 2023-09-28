@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>SemiShor算法计算ECDLP - QLuoShu</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SemiShor\u7b97\u6cd5\u8ba1\u7b97ECDLP";
+        var mkdocs_page_input_path = "ShorAlgorithm\\SemiShor\u7b97\u6cd5\u8ba1\u7b97ECDLP\\SemiShor\u7b97\u6cd5\u8ba1\u7b97ECDLP.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> QLuoShu
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">基本运算</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BasicOperation/%E5%B8%B8%E9%87%8F%E6%A8%A1%E8%BF%90%E7%AE%97/%E5%B8%B8%E9%87%8F%E6%A8%A1%E8%BF%90%E7%AE%97/">常量模运算</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BasicOperation/%E5%8F%98%E9%87%8F%E6%A8%A1%E8%BF%90%E7%AE%97/%E5%8F%98%E9%87%8F%E6%A8%A1%E8%BF%90%E7%AE%97/">变量模运算</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ECDLP</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ECDLP/%E4%BB%8B%E7%BB%8D/%E4%BB%8B%E7%BB%8D/">介绍</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ECDLP/C_ECDLP/C_ECDLP/">C_ECDLP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ECDLP/F2k_ECDLP/F2k_ECDLP/">F2k_ECDLP</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">EllipticCurve</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../EllipticCurve/%E4%BB%8B%E7%BB%8D/%E4%BB%8B%E7%BB%8D/">介绍</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../EllipticCurve/%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/">基本运算</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ShorAlgorithm</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../%E4%BB%8B%E7%BB%8D/%E4%BB%8B%E7%BB%8D/">介绍</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">SemiShor算法计算ECDLP</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Shor%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E7%A6%BB%E6%95%A3%E5%AF%B9%E6%95%B0/Shor%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E7%A6%BB%E6%95%A3%E5%AF%B9%E6%95%B0/">Shor算法求解椭圆曲线离散对数</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Shor%E7%AE%97%E6%B3%95%E8%AE%A1%E7%AE%97ECDLP%E7%9A%84%E5%87%BD%E6%95%B0%EF%BC%88p%3D7%EF%BC%89/Shor%E7%AE%97%E6%B3%95%E8%AE%A1%E7%AE%97ECDLP%E7%9A%84%E5%87%BD%E6%95%B0%EF%BC%88p%3D7%EF%BC%89/">Shor算法计算ECDLP的函数（p=7）</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">QLuoShu</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">ShorAlgorithm</li>
+      <li class="breadcrumb-item active">SemiShor算法计算ECDLP</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">介绍</h1>
+<p>Semiclassical_Shor（半经典）算法是基于原始Shor算法，将原始QFT分解为单比特下的半经典实现，
+通过边测量边置零的方式，将每次测量信息处理为下一次操作的相位旋转门，从而实现了半经典的QFT量子线路。</p>
+<p>Shor算法求解ECDLP的关键技术是设计椭圆曲线点加量子线路，如下图所示。
+<img alt="f1.png" src="../f1.png" /></p>
+<p>ECDLP(椭圆曲线离散对数问题):设E是一条椭圆曲线，其上的有理点P形成一个k阶加法群G=（p），若Q∈G且,Q=Kp，求k。</p>
+<p>ECC（椭圆曲线密码体制）：包括椭圆曲线加密算法、椭圆曲线密钥协商协议、椭圆曲线数字签名协议。其算法安全性基于ECDLP。
+本篇中的所有p为奇素数且。</p>
+<h1 id="_2">背景</h1>
+<p>1995年，Robert B. Griffiths和Chi-Sheng Niu设计了Semiclassical_Shor算法，
+目的是为了节省量子比特数。</p>
+<p>1994年，Peter Shor提出了著名的Shor算法，可以求解交换群上的隐藏子群问题。
+该算法充分利用了量子计算的叠加性以及纠缠性的特点，
+能够在多项式时间复杂度内完成大整数分解和离散对数问题（包括椭圆曲线离散对数问题），
+对传统公钥密码算法造成强大的威胁。Shor算法的提出极大地促进了量子计算的发展，
+也是量子算法首次在经典算法关注领域取得突破。</p>
+<h1 id="_3">安全性</h1>
+<p>1994年，Shor提出量子多项式时间算法求解整数分解问题以及离散对数问题，随后一些研究者将其推广到求解椭圆曲线离散对数问题。</p>
+<h1 id="_4">应用场景</h1>
+<p>Semiclassical_Shor算法可以在量子比特数受限的情况下，
+实现比原始Shor算法更大规模的整数分解或者离散对数求解或者椭圆曲线离散对数问题求解等数学问题。</p>
+<p>A. Yimsiriwattana and S.J. Lomonaco (2004)提出分布式的Shor算法。
+所以，在NISQ时代，实现Semiclassical_Shor算法是相当重要的。
+之后，Ligang Xiao等（2023）结合分布式Shor算法、Semiclassical_Shor算法和量子EPR，进一步优化的分布量子计算机的计算资源。</p>
+<p>ECC在数字货币、手机芯片、微信APP、银行卡以及银行系统中都有广泛的应用。</p>
+<p>研究Shor算法或Semiclassical_Shor算法求解ECDLP，
+对公钥密码体制的量子攻击分析至关重要。首先，在一定的量子硬件水平下，我们需要实现Shor算法攻击ECDLP的量子线路，
+验证其正确性，分析其成功概率。之后，我们需要在实现的基础上继续做优化与改进。在研究范畴，实现与验证算法的正确性是第一步的，
+后续也有助于进一步研究；在工程范畴，可以很好地体现了量子计算的优势。总体上来说，利用量子算法分析公钥密码安全，
+也在不断警示着，后量子密码需积极部署与迁移。</p>
+<h1 id="_5">国内外现状</h1>
+<p>微软、谷歌、IBM、KTH 皇家理工学院的Ekerå团队等研究团队做了一些较深入的研究。
+2013年，John Proos, Christof Zalka等人的工作，文中考虑素数域上的ECDLP。</p>
+<p>在此基础上，文献给出了算法所需的逻辑量子比特数约为6n，其中n为密钥长度。2017年，Martin Roetteler, Michael Naehrig等人
+给出了Shor算法攻击ECDLP的量子资源精确估计。</p>
+<p>2020年，Thomas Häner, Samuel Jaques等人通过“置换”总比特数、线路深度与T门数量，
+改进了针对椭圆曲线的Shor算法线路中的标量乘法模块，使之相较之前的线路有更短的线路深度和更少的T门数量。
+并且，作者还在具体的量子编程语言实现了点加模块以验证改进的正确性。</p>
+<p>2017年，Martin Roetteler, Michael Naehrig等人
+给出了Shor算法攻击ECDLP的量子资源精确估计。</p>
+<p>2020年，Thomas Häner, Samuel Jaques等人通过“置换”总比特数、线
+路深度与T门数量，改进了针对椭圆曲线的Shor算法线路中的标量乘法模块，使之相较之前的线路有更短的线路深度和更少的T门数量。
+并且，作者还在具体的量子编程语言实现了点加模块以验证改进的正确性。</p>
+<h1 id="semi_shor_ecdlpp-a-b-p-q">semi_shor_ecdlp(p, a, b, P, Q)</h1>
+<h2 id="_6">定义</h2>
+<h3 id="_7">算法含义</h3>
+<p>量子虚拟机下SemiShor算法求解椭圆曲线离散对数运算</p>
+<h3 id="_8">算法原理</h3>
+<p>利用QFT（Quantum Fourier Transform）可以做张量积展开，将QFT按比特展开，
+仅需一个控制比特并借助测量后的经典信息即可以实现QFT的。 
+随后应用于Shor算法求解ECDLP，下面的作用比特不断做受控点加操作。</p>
+<h3 id="_9">量子线路图</h3>
+<p>若已知G=（P），Q=[d]P，G的阶为r。利用Semiclassical Shor算法求解ECDLP的具体线路图如下
+<img alt="f2.png" src="../f2.png" /></p>
+<h2 id="_10">参数</h2>
+<p>int <strong>p</strong> <strong>a</strong> <strong>b</strong>:椭圆曲线参数
+vector <strong>P</strong> <strong>Q</strong>：椭圆曲线上的不同点</p>
+<h2 id="_11">返回值</h2>
+<p>SemiShor算法求解椭圆曲线离散对数运算计算结果</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../%E4%BB%8B%E7%BB%8D/%E4%BB%8B%E7%BB%8D/" class="btn btn-neutral float-left" title="介绍"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Shor%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E7%A6%BB%E6%95%A3%E5%AF%B9%E6%95%B0/Shor%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E7%A6%BB%E6%95%A3%E5%AF%B9%E6%95%B0/" class="btn btn-neutral float-right" title="Shor算法求解椭圆曲线离散对数">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../%E4%BB%8B%E7%BB%8D/%E4%BB%8B%E7%BB%8D/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../Shor%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E7%A6%BB%E6%95%A3%E5%AF%B9%E6%95%B0/Shor%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E7%A6%BB%E6%95%A3%E5%AF%B9%E6%95%B0/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

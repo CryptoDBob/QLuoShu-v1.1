@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>基本运算 - QLuoShu</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u57fa\u672c\u8fd0\u7b97";
+        var mkdocs_page_input_path = "EllipticCurve\\\u57fa\u672c\u8fd0\u7b97\\\u57fa\u672c\u8fd0\u7b97.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> QLuoShu
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">基本运算</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BasicOperation/%E5%B8%B8%E9%87%8F%E6%A8%A1%E8%BF%90%E7%AE%97/%E5%B8%B8%E9%87%8F%E6%A8%A1%E8%BF%90%E7%AE%97/">常量模运算</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BasicOperation/%E5%8F%98%E9%87%8F%E6%A8%A1%E8%BF%90%E7%AE%97/%E5%8F%98%E9%87%8F%E6%A8%A1%E8%BF%90%E7%AE%97/">变量模运算</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ECDLP</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ECDLP/%E4%BB%8B%E7%BB%8D/%E4%BB%8B%E7%BB%8D/">介绍</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ECDLP/C_ECDLP/C_ECDLP/">C_ECDLP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ECDLP/F2k_ECDLP/F2k_ECDLP/">F2k_ECDLP</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">EllipticCurve</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../%E4%BB%8B%E7%BB%8D/%E4%BB%8B%E7%BB%8D/">介绍</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">基本运算</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">定义</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_2">运算含义</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">运算公式</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">量子线路图</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">参数</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">返回值</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ShorAlgorithm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ShorAlgorithm/%E4%BB%8B%E7%BB%8D/%E4%BB%8B%E7%BB%8D/">介绍</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ShorAlgorithm/SemiShor%E7%AE%97%E6%B3%95%E8%AE%A1%E7%AE%97ECDLP/SemiShor%E7%AE%97%E6%B3%95%E8%AE%A1%E7%AE%97ECDLP/">SemiShor算法计算ECDLP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ShorAlgorithm/Shor%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E7%A6%BB%E6%95%A3%E5%AF%B9%E6%95%B0/Shor%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E7%A6%BB%E6%95%A3%E5%AF%B9%E6%95%B0/">Shor算法求解椭圆曲线离散对数</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../ShorAlgorithm/Shor%E7%AE%97%E6%B3%95%E8%AE%A1%E7%AE%97ECDLP%E7%9A%84%E5%87%BD%E6%95%B0%EF%BC%88p%3D7%EF%BC%89/Shor%E7%AE%97%E6%B3%95%E8%AE%A1%E7%AE%97ECDLP%E7%9A%84%E5%87%BD%E6%95%B0%EF%BC%88p%3D7%EF%BC%89/">Shor算法计算ECDLP的函数（p=7）</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">QLuoShu</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">EllipticCurve</li>
+      <li class="breadcrumb-item active">基本运算</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="q_epaddvx1vy1x2y2pn2">Q_EpADD(vx1,vy1,x2,y2,p,n2)</h1>
+<h2 id="_1">定义</h2>
+<h3 id="_2">运算含义</h3>
+<p>椭圆曲线受控点加运算</p>
+<h3 id="_3">运算公式</h3>
+<p>E/F_p：定义在有限域F_p上的椭圆曲线,P∈E(F_p)是阶为r的循环加法群。</p>
+<p>Q∈P,求解m∈Z_r,使得Q=[m]P。</p>
+<p>椭圆曲线点加计算公式：</p>
+<p>设椭圆曲线E/F_p:y^2=x^3+A x+B上两个点P_1=(x_1, y_1),P_2=(x_2, y_2)
+如下定义一个新点P_3，设通过P_1和P_2的直线L，L与E相交于第三个点P_3’，
+作P_3’关于x-轴的对称点(即改变y-坐标的符号)，得到点P_3，具体可见下图。
+这里定义P_1+P_2=P_3
+<img alt="f5.png" src="../f5.png" />
+下面给出加法公式：</p>
+<p>设E, P_1=(x_1, y_1), P_2=(x_2, y_2) 如上所示，P_1, P_2≠O。 定义P_1+P_2=P_3=(x_3, y_3)：
+    若x_1≠x_2，则
+<img alt="img_1.png" src="../img_1.png" />
+若x_1=x_2，但y_1=y_2，则
+P_1+P_2=O。</p>
+<p>若P_1=P_2和y_1≠0，则
+<img alt="img_3.png" src="../img_3.png" />
+若P_1=P_2和y_1=0，则P_1+P_2=O。
+此外，对于E上的所有点P，定义P+O=P。</p>
+<h3 id="_4">量子线路图</h3>
+<p><img alt="f3.png" src="../f3.png" /></p>
+<h2 id="_5">参数</h2>
+<p>int <strong>p</strong> <strong>x2</strong> <strong>y2</strong>:椭圆曲线参数</p>
+<p>qlist <strong>vx1</strong> <strong>vy1</strong>:n2量子比特数组</p>
+<p>int <strong>n2</strong>:ceil(log(p, 2))+1</p>
+<h2 id="_6">返回值</h2>
+<p>量子虚拟机下椭圆曲线受控点加运算模拟值</p>
+<h1 id="q_elliptic_paddpabpq">q_elliptic_padd(p,a,b,P,Q)</h1>
+<h2 id="_7">定义</h2>
+<h3 id="_8">运算公式</h3>
+<p>P+Q P,Q∈E/F_p:y^2 = x^3+ax+b</p>
+<h3 id="_9">运算含义</h3>
+<p>素数域上椭圆曲线点加运算</p>
+<h3 id="_10">量子线路图</h3>
+<p><img alt="f1.png" src="../f1.png" /></p>
+<h2 id="_11">参数</h2>
+<p>int <strong>p</strong> <strong>a</strong> <strong>b</strong>:椭圆曲线参数</p>
+<p>vector <strong>P</strong> <strong>Q</strong>：椭圆曲线上的不同点</p>
+<h2 id="_12">返回值</h2>
+<p>P+Q的坐标（x，y）的量子态</p>
+<h1 id="c_ecdlpp-a-b-p-q">C_ecdlp(p, a, b, P, Q)</h1>
+<h2 id="_13">定义</h2>
+<h3 id="_14">运算含义</h3>
+<p>ECDLP(椭圆曲线离散对数问题):
+设E/Fp是一条椭圆曲线，其上的有理点P形成一个k阶加法群G,若Q∈G且Q=mP，求m mod k。</p>
+<p>ECC（椭圆曲线密码体制）：包括椭圆曲线加密算法、椭圆曲线密钥协商协议、椭圆曲线数字签名协议。其算法安全性基于ECDLP。
+本篇中的所有p为奇素数且n=|log p|。</p>
+<h2 id="_15">参数</h2>
+<p>int <strong>p</strong> <strong>a</strong> <strong>b</strong>:椭圆曲线参数</p>
+<p>vector <strong>P</strong> <strong>Q</strong>：椭圆曲线上的不同点</p>
+<h2 id="_16">返回值</h2>
+<p>P与Q的倍数</p>
+<h1 id="c_epadda-b-p-p-q">C_Epadd(a, b, p, P, Q)</h1>
+<h2 id="_17">定义</h2>
+<p>经典计算机下椭圆曲线仿射坐标系下加法运算</p>
+<h2 id="_18">参数</h2>
+<p>int <strong>p</strong> <strong>a</strong> <strong>b</strong>:椭圆曲线参数</p>
+<p>vector <strong>P</strong> <strong>Q</strong>：椭圆曲线上的不同点</p>
+<h2 id="_19">返回值</h2>
+<p>椭圆曲线仿射坐标系下加法计算结果</p>
+<h1 id="ct_pointaddvx1vy1x2y2pn2ctrl">Ct_PointADD(vx1,vy1,x2,y2,p,n2,ctrl)</h1>
+<h2 id="_20">定义</h2>
+<p>椭圆曲线控制点加运算</p>
+<h2 id="_21">参数</h2>
+<p>int <strong>p</strong> <strong>x2</strong> <strong>y2</strong>:椭圆曲线参数</p>
+<p>qlist <strong>vx1</strong> <strong>vy1</strong>:n2量子比特数组</p>
+<p>int <strong>n2</strong>:ceil(log(p, 2))+1</p>
+<p>vector <strong>P</strong> <strong>Q</strong>：椭圆曲线上的不同点</p>
+<p>qubit <strong>ctrl</strong>：控制辅助量子比特</p>
+<h2 id="_22">返回值</h2>
+<p>椭圆曲线控制点加运算计算结果</p>
+<h1 id="q_elliptic_pdoup-a-b-p">q_elliptic_pdou(p, a, b, P)</h1>
+<h2 id="_23">定义</h2>
+<p>椭圆曲线二倍点运算</p>
+<h2 id="_24">参数</h2>
+<p>int <strong>p</strong> <strong>a</strong> <strong>b</strong>:椭圆曲线参数</p>
+<p><strong>P</strong>：椭圆曲线上的一个点</p>
+<h2 id="_25">返回值</h2>
+<p>椭圆曲线二倍点运算计算结果</p>
+<h1 id="q_epdouvx1vy1abxypn2">Q_EpDOU(vx1,vy1,a,b,x,y,p,n2)</h1>
+<h2 id="_26">定义</h2>
+<p>椭圆曲线二倍点运算</p>
+<h2 id="_27">参数</h2>
+<p>int <strong>p</strong> <strong>a</strong> <strong>b</strong>:椭圆曲线参数</p>
+<p>int <strong>x</strong> <strong>y</strong>:椭圆曲线上一个点的坐标</p>
+<p>qlist <strong>vx1</strong> <strong>vy1</strong>:n2量子比特数组</p>
+<p>int <strong>n2</strong>:ceil(log(p, 2))+1</p>
+<h2 id="_28">返回值</h2>
+<p>椭圆曲线二倍点运算计算结果</p>
+<h1 id="qinverseqp">qinverse(q,p)</h1>
+<h2 id="_29">定义</h2>
+<p>量子虚拟机下模p求逆运算</p>
+<h2 id="_30">参数</h2>
+<p>int <strong>p</strong>:模数</p>
+<p>int <strong>q</strong>：操作数</p>
+<h2 id="_31">返回值</h2>
+<p>量子虚拟机下模p求逆运算计算结果</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../%E4%BB%8B%E7%BB%8D/%E4%BB%8B%E7%BB%8D/" class="btn btn-neutral float-left" title="介绍"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../../ShorAlgorithm/%E4%BB%8B%E7%BB%8D/%E4%BB%8B%E7%BB%8D/" class="btn btn-neutral float-right" title="介绍">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../%E4%BB%8B%E7%BB%8D/%E4%BB%8B%E7%BB%8D/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../../ShorAlgorithm/%E4%BB%8B%E7%BB%8D/%E4%BB%8B%E7%BB%8D/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
